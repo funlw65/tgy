@@ -80,73 +80,73 @@
 ;
 ; The following only works with avra or avrasm2.
 ; For avrasm32, just comment out all but the include you need.
-#if defined(afro_esc)
-#include "afro.inc"		; AfroESC (ICP PWM, I2C, UART)
-#elif defined(afro2_esc)
-#include "afro2.inc"		; AfroESC 2 (ICP PWM, I2C, UART)
-#elif defined(afro_hv_esc)
-#include "afro_hv.inc"		; AfroESC HV with drivers (ICP PWM, I2C, UART)
-#elif defined(afro_nfet_esc)
+; #if defined(afro_esc)
+; #include "afro.inc"		; AfroESC (ICP PWM, I2C, UART)
+; #elif defined(afro2_esc)
+; #include "afro2.inc"		; AfroESC 2 (ICP PWM, I2C, UART)
+; #elif defined(afro_hv_esc)
+; #include "afro_hv.inc"		; AfroESC HV with drivers (ICP PWM, I2C, UART)
+; #elif defined(afro_nfet_esc)
 #include "afro_nfet.inc"	; AfroESC 3 with all nFETs (ICP PWM, I2C, UART)
-#elif defined(arctictiger_esc)
-#include "arctictiger.inc"	; Arctic Tiger 30A ESC with all nFETs (ICP PWM)
-#elif defined(birdie70a_esc)
-#include "birdie70a.inc"	; Birdie 70A with all nFETs (INT0 PWM)
-#elif defined(mkblctrl1_esc)
-#include "mkblctrl1.inc"	; MK BL-Ctrl v1.2 (ICP PWM, I2C, UART, high side PWM, sense hack)
-#elif defined(bs_esc)
-#include "bs.inc"		; HobbyKing BlueSeries / Mystery (INT0 PWM)
-#elif defined(bs_nfet_esc)
-#include "bs_nfet.inc"		; HobbyKing BlueSeries / Mystery with all nFETs (INT0 PWM)
-#elif defined(bs40a_esc)
-#include "bs40a.inc"		; HobbyKing BlueSeries / Mystery 40A (INT0 PWM)
-#elif defined(dlu40a_esc)
-#include "dlu40a.inc"		; Pulso Advance Plus 40A DLU40A inverted-PWM-opto (INT0 PWM)
-#elif defined(dlux_esc)
-#include "dlux.inc"		; HobbyKing Dlux Turnigy ESC 20A
-#elif defined(diy0_esc)
-#include "diy0.inc"		; HobbyKing DIY Open ESC (unreleased rev 0)
-#elif defined(dys_nfet_esc)
-#include "dys_nfet.inc"		; DYS 30A ESC with all nFETs (ICP PWM, I2C, UART)
-#elif defined(hk200a_esc)
-#include "hk200a.inc"		; HobbyKing SS Series 190-200A with all nFETs (INT0 PWM)
-#elif defined(hm135a_esc)
-#include "hm135a.inc"		; Hacker/Jeti Master 135-O-F5B 135A inverted-PWM-opto (INT0 PWM)
-#elif defined(kda_esc)
-#include "kda.inc"		; Keda/Multistar 12A, 20A, 30A (original) (inverted INT0 PWM)
-#elif defined(kda_8khz_esc)
-#include "kda_8khz.inc"		; Keda/Multistar 30A (early 2014) (inverted INT0 PWM)
-#elif defined(kda_nfet_esc)
-#include "kda_nfet.inc"		; Keda/Multistar 30A with all nFETs (inverted INT0 PWM)
-#elif defined(kda_nfet_ni_esc)
-#include "kda_nfet_ni.inc"	; Keda/Multistar/Sunrise ~30A with all nFETs (INT0 PWM)
-#elif defined(rb50a_esc)
-#include "rb50a.inc"		; Red Brick 50A with all nFETs (INT0 PWM)
-#elif defined(rb70a_esc)
-#include "rb70a.inc"		; Red Brick 70A with all nFETs (INT0 PWM)
-#elif defined(rct50a_esc)
-#include "rct50a.inc"		; RCTimer 50A (MLF version) with all nFETs (INT0 PWM)
-#elif defined(tbs_esc)
-#include "tbs.inc"		; TBS 30A ESC (Team BlackSheep) with all nFETs (ICP PWM, UART)
-#elif defined(tbs_hv_esc)
-#include "tbs_hv.inc"		; TBS high voltage ESC (Team BlackSheep) with all nFETs (ICP PWM, UART)
-#elif defined(tp_esc)
-#include "tp.inc"		; TowerPro 25A/HobbyKing 18A "type 1" (INT0 PWM)
-#elif defined(tp_8khz_esc)
-#include "tp_8khz.inc"		; TowerPro 25A/HobbyKing 18A "type 1" (INT0 PWM) at 8kHz PWM
-#elif defined(tp_i2c_esc)
-#include "tp_i2c.inc"		; TowerPro 25A/HobbyKing 18A "type 1" (I2C)
-#elif defined(tp_nfet_esc)
-#include "tp_nfet.inc"		; TowerPro 25A with all nFETs "type 3" (INT0 PWM)
-#elif defined(tp70a_esc)
-#include "tp70a.inc"		; TowerPro 70A with BL8003 FET drivers (INT0 PWM)
-#elif defined(tgy6a_esc)
-#include "tgy6a.inc"		; Turnigy Plush 6A (INT0 PWM)
-#elif defined(tgy_esc)
-#include "tgy.inc"		; TowerPro/Turnigy Basic/Plush "type 2" (INT0 PWM)
-#else
-#error "Unrecognized board type."
-#endif
+; #elif defined(arctictiger_esc)
+; #include "arctictiger.inc"	; Arctic Tiger 30A ESC with all nFETs (ICP PWM)
+; #elif defined(birdie70a_esc)
+; #include "birdie70a.inc"	; Birdie 70A with all nFETs (INT0 PWM)
+; #elif defined(mkblctrl1_esc)
+; #include "mkblctrl1.inc"	; MK BL-Ctrl v1.2 (ICP PWM, I2C, UART, high side PWM, sense hack)
+; #elif defined(bs_esc)
+; #include "bs.inc"		; HobbyKing BlueSeries / Mystery (INT0 PWM)
+; #elif defined(bs_nfet_esc)
+; #include "bs_nfet.inc"		; HobbyKing BlueSeries / Mystery with all nFETs (INT0 PWM)
+; #elif defined(bs40a_esc)
+; #include "bs40a.inc"		; HobbyKing BlueSeries / Mystery 40A (INT0 PWM)
+; #elif defined(dlu40a_esc)
+; #include "dlu40a.inc"		; Pulso Advance Plus 40A DLU40A inverted-PWM-opto (INT0 PWM)
+; #elif defined(dlux_esc)
+; #include "dlux.inc"		; HobbyKing Dlux Turnigy ESC 20A
+; #elif defined(diy0_esc)
+; #include "diy0.inc"		; HobbyKing DIY Open ESC (unreleased rev 0)
+; #elif defined(dys_nfet_esc)
+; #include "dys_nfet.inc"		; DYS 30A ESC with all nFETs (ICP PWM, I2C, UART)
+; #elif defined(hk200a_esc)
+; #include "hk200a.inc"		; HobbyKing SS Series 190-200A with all nFETs (INT0 PWM)
+; #elif defined(hm135a_esc)
+; #include "hm135a.inc"		; Hacker/Jeti Master 135-O-F5B 135A inverted-PWM-opto (INT0 PWM)
+; #elif defined(kda_esc)
+; #include "kda.inc"		; Keda/Multistar 12A, 20A, 30A (original) (inverted INT0 PWM)
+; #elif defined(kda_8khz_esc)
+; #include "kda_8khz.inc"		; Keda/Multistar 30A (early 2014) (inverted INT0 PWM)
+; #elif defined(kda_nfet_esc)
+; #include "kda_nfet.inc"		; Keda/Multistar 30A with all nFETs (inverted INT0 PWM)
+; #elif defined(kda_nfet_ni_esc)
+; #include "kda_nfet_ni.inc"	; Keda/Multistar/Sunrise ~30A with all nFETs (INT0 PWM)
+; #elif defined(rb50a_esc)
+; #include "rb50a.inc"		; Red Brick 50A with all nFETs (INT0 PWM)
+; #elif defined(rb70a_esc)
+; #include "rb70a.inc"		; Red Brick 70A with all nFETs (INT0 PWM)
+; #elif defined(rct50a_esc)
+; #include "rct50a.inc"		; RCTimer 50A (MLF version) with all nFETs (INT0 PWM)
+; #elif defined(tbs_esc)
+; #include "tbs.inc"		; TBS 30A ESC (Team BlackSheep) with all nFETs (ICP PWM, UART)
+; #elif defined(tbs_hv_esc)
+; #include "tbs_hv.inc"		; TBS high voltage ESC (Team BlackSheep) with all nFETs (ICP PWM, UART)
+; #elif defined(tp_esc)
+; #include "tp.inc"		; TowerPro 25A/HobbyKing 18A "type 1" (INT0 PWM)
+; #elif defined(tp_8khz_esc)
+; #include "tp_8khz.inc"		; TowerPro 25A/HobbyKing 18A "type 1" (INT0 PWM) at 8kHz PWM
+; #elif defined(tp_i2c_esc)
+; #include "tp_i2c.inc"		; TowerPro 25A/HobbyKing 18A "type 1" (I2C)
+; #elif defined(tp_nfet_esc)
+; #include "tp_nfet.inc"		; TowerPro 25A with all nFETs "type 3" (INT0 PWM)
+; #elif defined(tp70a_esc)
+; #include "tp70a.inc"		; TowerPro 70A with BL8003 FET drivers (INT0 PWM)
+; #elif defined(tgy6a_esc)
+; #include "tgy6a.inc"		; Turnigy Plush 6A (INT0 PWM)
+; #elif defined(tgy_esc)
+; #include "tgy.inc"		; TowerPro/Turnigy Basic/Plush "type 2" (INT0 PWM)
+; #else
+; #error "Unrecognized board type."
+; #endif
 
 .equ	CPU_MHZ		= F_CPU / 1000000
 
@@ -155,7 +155,7 @@
 .equ	BOOT_START	= THIRDBOOTSTART
 
 .if !defined(COMP_PWM)
-.equ	COMP_PWM	= 0	; During PWM off, switch high side on (unsafe on some boards!)
+.equ	COMP_PWM	= 1	; During PWM off, switch high side on (unsafe on some boards!)
 .endif
 .if !defined(DEAD_LOW_NS)
 .equ	DEAD_LOW_NS	= 300	; Low-side dead time w/COMP_PWM (62.5ns steps @ 16MHz, max 2437ns)
@@ -168,7 +168,7 @@
 .equ	MOTOR_ADVANCE	= 18	; Degrees of timing advance (0 - 30, 30 meaning no delay)
 .endif
 .if !defined(TIMING_OFFSET)
-.equ	TIMING_OFFSET	= 0	; Motor timing offset in microseconds
+.equ	TIMING_OFFSET	= 0	; Motor timing offset in microseconds (for optimizing consumption)
 .endif
 .equ	MOTOR_BRAKE	= 0	; Enable brake during neutral/idle ("motor drag" brake)
 .equ	LOW_BRAKE	= 0	; Enable brake on very short RC pulse ("thumb" brake like on Airtronics XL2P)
@@ -176,7 +176,7 @@
 .equ	MOTOR_REVERSE	= 0	; Reverse normal commutation direction
 .endif
 .equ	RC_PULS_REVERSE	= 0	; Enable RC-car style forward/reverse throttle
-.equ	RC_CALIBRATION	= 1	; Support run-time calibration of min/max pulse lengths
+.equ	RC_CALIBRATION	= 0	; Support run-time calibration of min/max pulse lengths
 .equ	SLOW_THROTTLE	= 0	; Limit maximum throttle jump to try to prevent overcurrent
 .equ	BEACON		= 1	; Beep periodically when RC signal is lost
 .if !defined(CHECK_HARDWARE)
