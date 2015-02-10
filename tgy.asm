@@ -2613,8 +2613,8 @@ i_rc_puls2:	wdr
 i_rc_puls_rx:	rcall	evaluate_rc_init
 		lds	YL, rc_duty_l
 		lds	YH, rc_duty_h
-		adiw	YL, 0			; Test for zero
-		brne	i_rc_puls1
+		;adiw	YL, 0			; Test for zero --> MOD for instant start
+		;brne	i_rc_puls1
 		ldi	temp1, 10		; wait for this count of receiving power off
 		cp	rc_timeout, temp1
 		brlo	i_rc_puls2
